@@ -1,0 +1,28 @@
+# ── 예측 모델 실행 필수 ──
+pandas>=2.2
+numpy>=1.26
+lightgbm>=4.3          # macOS 는 `brew install libomp` 필요, Linux 이미지는 libgomp1
+scikit-learn>=1.4
+requests>=2.31
+pyyaml>=6.0
+
+# MSSQL (Microsoft SQL Server)
+apache-airflow-providers-microsoft-mssql
+pymssql  # pip으로만 설치, 시스템 패키지 불필요
+
+# PostgreSQL (데이터 소스/타겟용)
+apache-airflow-providers-postgres
+psycopg2-binary
+
+# sql 읽기
+sqlalchemy
+
+# Common SQL utilities
+apache-airflow-providers-common-sql
+
+# foot_traffic (KOSIS 유동인구 크롤링)
+selenium       # headless Chromium 제어 (Dockerfile에서 chromium/chromium-driver 시스템 패키지 설치)
+openpyxl       # 다운로드한 .xlsx 엑셀 파일 읽기
+
+# dbt 연동 예시 DAG (dags/dbt_example) - 이미 떠 있는 dev-dbt 컨테이너에 docker exec
+docker
