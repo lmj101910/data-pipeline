@@ -27,6 +27,7 @@
 !/dbt/requirements.txt
 !/dbt/.env.example
 
+!/gitlab/docker-compose.yaml
 !/gitlab/.env.example
 !/runner/docker-compose.yaml
 !/runner/.env.example
@@ -43,8 +44,6 @@
 **/.DS_Store
 # 내부에 별도 .git 이 있는 예전 코드 폴더 (통째로 제외)
 /airflow/dags/old_py_files/
-# 초기 root 비밀번호가 하드코딩되어 있음. 환경변수로 바꾸기 전까지 제외
-/gitlab/docker-compose.yaml
 
 # 4) 확인된 DAG (사용자가 직접 확인한 파일만 한 줄씩 추가)
 #    예) !/airflow/dags/sample/sample_dag.py
